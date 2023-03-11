@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1, 5;
+  background-color: white;
+}
+
+.qwe {
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.qwe-item {
+  border: 1px solid #b91125;
+  margin-bottom: 5px;
+}
+
+.qwe-title {
+  display: block;
+  padding: 10px 15px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s ease-out;
+}
+.qwe-title:after {
+  content: "";
+  display: block;
+  border-style: solid;
+  border-width: 10px 5px 0 5px;
+  border-color: #007bff transparent transparent transparent;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+.qwe-input {
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+.qwe-input:checked ~ .qwe-title {
+  color: #09bf6d;
+}
+.qwe-input:checked ~ .qwe-title::after {
+  border-style: solid;
+  border-width: 0 5px 10px 5px;
+  border-color: transparent transparent #09bf6d transparent;
+}
+.qwe-input:checked ~ .qwe-text {
+  display: block;
+}
+
+.qwe-title:hover {
+  color: #09bf6d;
+}
+.qwe-text {
+  display: none;
+  color: rgb(5, 5, 5);
+  font-size: 50 px;
+}
