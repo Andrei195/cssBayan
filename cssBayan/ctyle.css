@@ -2,6 +2,18 @@ h1 {
   color: rgb(5, 5, 5);
   font-family: Verdana, Geneva, sans-serif;
 }
+img {
+  transition: 0.5s;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+  overflow: hidden;
+  align-items: center;
+  height: 490px;
+  width: 490px;
+}
 body {
   font-family: Arial, sans-serif;
   font-size: 16px;
@@ -10,6 +22,10 @@ body {
 }
 
 .qwe {
+  transition: 0.5s;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
   background-color: #1bd258;
   border: solid 3px white;
   border-radius: 10px;
@@ -29,18 +45,27 @@ body {
   position: relative;
   cursor: pointer;
   transition: background 0.2s ease-out;
+  height: 100%;
+  width: auto;
 }
+
 .qwe-title:after {
   content: "";
   display: block;
   border-style: solid;
   border-width: 10px 5px 0 5px;
-  border-color: #007bff transparent transparent transparent;
+  border-color: rgb(5, 5, 5) transparent transparent transparent;
   position: absolute;
   top: 50%;
   right: 15px;
   transform: translateY(-50%);
 }
+.qwe-input:checked ~ .qwe-title::after {
+  border-style: solid;
+  border-width: 0 5px 10px 5px;
+  border-color: transparent transparent #b91125 transparent;
+}
+
 .qwe-input {
   width: 0;
   height: 0;
@@ -49,11 +74,7 @@ body {
 .qwe-input:checked ~ .qwe-title {
   color: #b91125;
 }
-.qwe-input:checked ~ .qwe-title::after {
-  border-style: solid;
-  border-width: 0 5px 10px 5px;
-  border-color: transparent transparent #b91125 transparent;
-}
+
 .qwe-input:checked ~ .qwe-text {
   display: block;
 }
