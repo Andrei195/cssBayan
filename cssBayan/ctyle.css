@@ -1,0 +1,89 @@
+h1 {
+  color: rgb(5, 5, 5);
+  font-family: Verdana, Geneva, sans-serif;
+}
+img {
+  transition: 0.5s;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+  overflow: hidden;
+  align-items: center;
+  height: 490px;
+  width: 490px;
+}
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1, 5;
+  background-color: rgb(29, 162, 179);
+}
+
+.qwe {
+  transition: 0.5s;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: #1bd258;
+  border: solid 3px white;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.qwe-item {
+  border: 1px solid #b91125;
+  border-radius: 7px;
+  margin-bottom: 5px;
+}
+
+.qwe-title {
+  display: block;
+  padding: 10px 15px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s ease-out;
+  height: 100%;
+  width: auto;
+}
+
+.qwe-title:after {
+  content: "";
+  display: block;
+  border-style: solid;
+  border-width: 10px 5px 0 5px;
+  border-color: rgb(5, 5, 5) transparent transparent transparent;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+.qwe-input:checked ~ .qwe-title::after {
+  border-style: solid;
+  border-width: 0 5px 10px 5px;
+  border-color: transparent transparent #b91125 transparent;
+}
+
+.qwe-input {
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+.qwe-input:checked ~ .qwe-title {
+  color: #b91125;
+}
+
+.qwe-input:checked ~ .qwe-text {
+  display: block;
+}
+
+.qwe-title:hover {
+  color: #b91125;
+}
+.qwe-text {
+  display: none;
+  color: rgb(5, 5, 5);
+  font-size: 50 px;
+}
